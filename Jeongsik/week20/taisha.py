@@ -76,3 +76,10 @@ Pi	10	20	10	20	15	40	200
 5 50
 
 '''
+dataArr = {}
+insertDueday = int(input())
+for _ in range(insertDueday):
+    data = input().split(' ')
+    dataArr[_+1] = { data[0] : data[1] }
+    
+print(dataArr)
