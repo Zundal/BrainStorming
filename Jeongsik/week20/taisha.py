@@ -78,8 +78,24 @@ Pi	10	20	10	20	15	40	200
 '''
 dataArr = {}
 insertDueday = int(input())
+dueDay = []
+valueStack = []
 for _ in range(insertDueday):
-    data = input().split(' ')
-    dataArr[_+1] = { data[0] : data[1] }
-    
-print(dataArr)
+    s, v = map(int, input().split())
+    dueDay.append((_+1, s+_, v))
+
+dueDay.sort(key = lambda x : (x[1], x[2]))
+print(dueDay)
+#x 시작시간 y 끝시간 z value 
+result = {}
+answer = 0
+temp = 0, 0, 0
+for x, y, z in dueDay:
+    if y <= insertDueday:
+        if x > temp[1]:
+            result[y] = z
+            answer = answer + z
+    temp = x, y, z
+
+# print(answer)
+print(result)
