@@ -47,4 +47,4 @@ for i in inputData:
     alpha[i] = alpha[i] + 1
 
 for value in alpha:
-    print(alpha[value], sep=' ')
+    print(alpha[value], end=' ')
