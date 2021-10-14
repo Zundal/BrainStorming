@@ -32,8 +32,6 @@ a, b, c = 1, 1, 1
     
 print(w(a, b, c))'''
 
-'''
-'''
 MAX = 21
 dp = [[[0]*MAX for _ in range(MAX)] for __ in range(MAX)]
 
